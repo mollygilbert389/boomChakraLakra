@@ -1,0 +1,20 @@
+{
+  "name": "boom_chakra_lakra",
+  "version": "1.0.0",
+  "description": "groupProject2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mollygilbert389/groupProject2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mollygilbert389/groupProject2/issues"
+  },
+  "homepage": "https://github.com/mollygilbert389/groupProject2#readme"
+}
