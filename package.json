@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/mollygilbert389/groupProject2/issues"
   },
-  "homepage": "https://github.com/mollygilbert389/groupProject2#readme"
+  "homepage": "https://github.com/mollygilbert389/groupProject2#readme",
+  "dependencies": {
+    "exphbs": "^1.2.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.16.0"
+  }
 }
