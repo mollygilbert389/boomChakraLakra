@@ -1,3 +1,5 @@
+  //this is the function behind the sign up modal
+  
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.modal');
     var instances = M.Modal.init(elems);
@@ -9,5 +11,8 @@
     var instances = M.FormSelect.init(elems);
     console.log(instances)
   });
+
+
+
 
   
