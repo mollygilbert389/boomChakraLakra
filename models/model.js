@@ -22,11 +22,11 @@ var model = {
       cb(res);
     });
   },
-  resetAll: function(cb) {
-    orm.resetAll(function(res) {
-      cb(res);
-    });
-  }
+  // resetAll: function(cb) {
+  //   orm.resetAll(function(res) {
+  //     cb(res);
+  //   });
+  // }
 };
 
 module.exports = model;
