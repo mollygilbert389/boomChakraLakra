@@ -57,15 +57,4 @@ var api = {
 }
 
 
-var request = require('request');
-var http = require('http');
-
-
-
-
-
-
-
-
-
 module.exports = api;
