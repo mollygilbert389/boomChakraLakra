@@ -96,9 +96,8 @@
     })
       </script></nav>
   <br>
-      <!-- Page Layout here -->
+    <!-- Page Layout here -->
       <div class="row">
-
           <div class="col s3">
               <div class="col s12" img src="https://via.placeholder.com/150" alt="chakra placeholder">
                 <br>
@@ -118,13 +117,36 @@
           </div>
           <div class="col s6">
             <hr>
-            <div class="col s12"><img src="/assets/images/LotusPose copy.png" alt="" class="circle responsive-img"></div>
+            <div class="col s12">
+            <div id="container" style="position: relative">
+              <div id="screen" style="position: absolute; width: 500px; height: 467px;">
+                <button id="chakraCrown" style="position: absolute; top: -10px; right:230px; background-color:blueviolet; border-radius: 50%; font-size: 20px; color:transparent">Test</button>
+                <button id="thirdEye" style="position: absolute; top: 42px; right:230px; background-color:blue; border-radius: 50%; font-size: 20px; color:transparent">Test</button>
+                <button id="throat" style="position: absolute; top: 102px; right:230px; background-color:rgb(69, 212, 212); border-radius: 50%; font-size: 20px; color:transparent">Test</button>
+                <button id="heart" style="position: absolute; top: 199px; right:230px; background-color:green; border-radius: 50%; font-size: 20px; color:transparent">Test</button>
+                <button id="solarPlexus" style="position: absolute; top: 300px; right:230px; background-color:yellow; border-radius: 50%; font-size: 20px; color:transparent">Test</button>
+                <button id="sacral" style="position: absolute; top: 355px; right:230px; background-color:orange; border-radius: 50%; font-size: 20px; color:transparent">Test</button>
+                <button id="root" style="position: absolute; top: 405px; right:230px; background-color:red; border-radius: 50%; font-size: 20px; color:transparent">Test</button>
+              </div>
+              <img src="/assets/images/LotusPose copy.png" usemap="#image-map" hide-focus="true">
+           <map name="image-map">
+          <area id="one" target="_blank" alt="ChakraCrown" title="ChakraCrown" href="index.handlebars" coords="240,9,10" shape="circle">
+          <area target="_top" alt="ThirdEye" title="ThirdEye" href="index.handlebars" coords="240,52,10" shape="circle">
+          <area target="_top" alt="Throat" title="Throat" href="index.handlebars" coords="240,142,10" shape="circle">
+          <area target="_top" alt="Heart" title="Heart" href="index.handlebars" coords="240,204,10" shape="circle">
+          <area target="_top" alt="SolarPlexus" title="SolarPlexus" href="index.handlebars" coords="240,307,10" shape="circle">
+          <area target="_top" alt="Sacral" title="Sacral" href="index.handlebars" coords="240,355,10" shape="circle">
+          <area target="_top" alt="Root" title="Root" href="" coords="240,405,10" shape="circle">
+             </map>
+           </canvas>
+        </div>
+      </div>
             <br>
             <br>
             <div class="col s12">Mantra: "I AM.."</div>
           </div>
           <div class="col s3">
-            <div class="col s12" style="background-color:blue; border-style: solid; border-width: 5px; border-color: white; padding: 2px;">Horoscope
+            <div id=class="col s12" style="background-color:blue; border-style: solid; border-width: 5px; border-color: white; padding: 2px;">Horoscope
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel hendrerit mauris, vel congue eros. Sed varius ornare malesuada.
             <br>
             </div>

@@ -29,7 +29,6 @@ module.exports = function(app) {
     });
 
   app.post("/api/users", function(req, res) {
-    // adds new user to DB
     console.log(req.body);
     db.signs.create(req.body).then(function(dbUser) {
       res.json(dbUser);
