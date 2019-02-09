@@ -5,9 +5,9 @@ var mysql = require("mysql");
 // } else {
 connection = mysql.createConnection({
     host: "localhost",
-    port: 3306,
+    port: 8889,
     user: "root",
-    password: "password",
+    password: "root",
     database: "sign_db"
   });
 // }

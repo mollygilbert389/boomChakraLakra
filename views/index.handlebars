@@ -1,4 +1,73 @@
 <div id="master">
+  <nav style="background-color: white;"> <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Log In</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4 style="color:blue">Log In</h4>
+     <form>
+
+  <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="first_name" type="text" class="validate">
+            <label for="first_name">First Name</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="last_name" type="text" class="validate">
+            <label for="last_name">Last Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+              <div class="input-field col s12">
+                  <select>
+                    <option value="" disabled selected>Choose Your Sign</option>
+                    <option value="1">Aries</option>
+                    <option value="2">Taurus</option>
+                    <option value="3">Gemini</option>
+                    <option value="4">Libra</option>
+                    <option value="5">Scorpio</option>
+                    <option value="6">Sagittarius</option>
+                    <option value="7">Cancer</option>
+                    <option value="8">Leo</option>
+                    <option value="9">Virgo</option>
+                    <option value="10">Capricorn</option>
+                    <option value="11">Aquarius</option>
+                    <option value="12">Pisces</option>
+
+                  </select>
+                </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="password" type="password" class="validate">
+            <label for="password">Password</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate">
+            <label for="email">Email</label>
+          </div>
+        </div>
+      </form>
+    </div>
+     </form>
+    </div>
+    <div class="modal-footer">
+      <a href="" id = "login" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+     <script>
+      $().ready(function(){ 
+    $('#modal1').modal('open');
+        })
+    $('#login').on('click', function(event){
+      event.preventDefault();
+    });
+      </script></nav>
   <br>
       <!-- Page Layout here -->
       <div class="row">
@@ -22,7 +91,7 @@
           </div>
           <div class="col s6">
             <hr>
-            <div class="col s12"><img src="/public/assets/css/human-body2-512.png" alt="" class="circle responsive-img"></div>
+            <div class="col s12"><img src="/assets/images/LotusPose copy.png" alt="" class="circle responsive-img"></div>
             <br>
             <br>
             <div class="col s12">Mantra: "I AM.."</div>
@@ -128,59 +197,6 @@
             </div>
           </div>
         </div>
-  <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-     <form>
-
-  <div class="row">
-      <form class="col s12">
-        <div class="row">
-          <div class="input-field col s6">
-            <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-            <label for="first_name">First Name</label>
-          </div>
-          <div class="input-field col s6">
-            <input id="last_name" type="text" class="validate">
-            <label for="last_name">Last Name</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-              <div class="input-field col s12">
-                  <select>
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                  </select>
-                  <label>Materialize Select</label>
-                </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="password" type="password" class="validate">
-            <label for="password">Password</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="email" type="email" class="validate">
-            <label for="email">Email</label>
-          </div>
-        </div>
-      </form>
-    </div>
-     </form>
-    </div>
-    <div class="modal-footer">
-      <a href="" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
   </div>
 <!-- <div class="body">
   <div class="right-side">
@@ -199,6 +215,6 @@
   <div class="row">
       <div class="col s6 offset-s3" style="background-color:blue"><img src="../Project2/human-body2-512.png" alt="" class="circle responsive-img"></div>
   </div> -->
-  <script type="text/javascript" src="/materialize/js/materialize.min.js"></script>
+  <script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
 </div>
 </div>
