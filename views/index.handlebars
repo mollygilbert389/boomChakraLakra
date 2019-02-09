@@ -1,72 +1,99 @@
 <div id="master">
-  <nav style="background-color: white;"> <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Log In</a>
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4 style="color:blue">Log In</h4>
-     <form>
-
-  <div class="row">
-      <form class="col s12">
+  <nav style="background-color: white;">
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Log In</a>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4 style="color:blue">Tell us about yourself!</h4>
+      <form>
         <div class="row">
-          <div class="input-field col s6">
-            <input id="first_name" type="text" class="validate">
-            <label for="first_name">First Name</label>
-          </div>
-          <div class="input-field col s6">
-            <input id="last_name" type="text" class="validate">
-            <label for="last_name">Last Name</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
+          <form class="col s6">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="firstName" type="text" class="validate">
+                <label for="firstName">First Name</label>
+              </div>
+              </div>
+          
+          <form class="col s6">
+            <div class="row">
+              <div class="input-field col s2">
+             
+                <input id="dayOfBirth" type="number" class="validate" ng-pattern="onlyNumbers" placeholder="01" min="3" max="3">
+                <label for="dayOfBirth">Day of Birth</label>
+            
+            </div>
+            
+              <div class="input-field col s2">  
+               <input id="monthOfBirth" type="number" class="validate" ng-pattern="onlyNumbers" placeholder="01" min="2" max="3">
+                <label for="monthOfBirth">Month of Birth</label>
+                </div>
+                
+              <div class="input-field col s2">  
+               <input id="yearOfBirth" type="number" class="validate" placeholder="1992" min="4" max="5">
+                <label for="yearOfBirth">Year of Birth</label>
+               </div>
+                
+                
+            <div class="row">
               <div class="input-field col s12">
-                  <select>
+                <div class="input-field col s12">
+                  <select id="yourSign">
                     <option value="" disabled selected>Choose Your Sign</option>
-                    <option value="1">Aries</option>
-                    <option value="2">Taurus</option>
-                    <option value="3">Gemini</option>
-                    <option value="4">Libra</option>
-                    <option value="5">Scorpio</option>
-                    <option value="6">Sagittarius</option>
-                    <option value="7">Cancer</option>
-                    <option value="8">Leo</option>
-                    <option value="9">Virgo</option>
-                    <option value="10">Capricorn</option>
-                    <option value="11">Aquarius</option>
-                    <option value="12">Pisces</option>
-
+                    <option>Aries</option>
+                    <option>Taurus</option>
+                    <option>Gemini</option>
+                    <option>Libra</option>
+                    <option>Scorpio</option>
+                    <option>Sagittarius</option>
+                    <option>Cancer</option>
+                    <option>Leo</option>
+                    <option>Virgo</option>
+                    <option>Capricorn</option>
+                    <option>Aquarius</option>
+                    <option>Pisces</option>
                   </select>
                 </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="password" type="password" class="validate">
-            <label for="password">Password</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="email" type="email" class="validate">
-            <label for="email">Email</label>
-          </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+          </form>
         </div>
       </form>
-    </div>
-     </form>
     </div>
     <div class="modal-footer">
       <a href="" id = "login" class="modal-close waves-effect waves-green btn-flat">Agree</a>
     </div>
      <script>
-      $().ready(function(){ 
-    $('#modal1').modal('open');
-        })
-    $('#login').on('click', function(event){
+        $(document).ready(function(){
+      $('#modal1').modal('open');
+    })
+
+    $('#login').on('click', function(event) {
       event.preventDefault();
     });
+
+    $('#login').on('click', function(event) {
+      var firstName = $('#firstName').val();
+      var dayOfBirth = $('#dayOfBirth').val();
+      var monthOfBirth = $('#monthOfBirth').val();
+      var yearOfBirth = $('#yearOfBirth').val();
+      var yourSign = $('#yourSign').val();
+      var email = $('#email').val();
+      console.warn(firstName, yourSign, dayOfBirth, monthOfBirth, yearOfBirth, email);
+      var postObject = {
+        firstName: firstName,
+        dayOfBirth: dayOfBirth,
+        monthOfBirth: monthOfBirth,
+        yearOfBirth: yearOfBirth,
+        email: email
+      }
+    })
       </script></nav>
   <br>
       <!-- Page Layout here -->
@@ -198,23 +225,6 @@
           </div>
         </div>
   </div>
-<!-- <div class="body">
-  <div class="right-side">
-    <div class="row">
-      <div class="col s3 offset+s6" style="background-color:blue"><span class="flow-text">Enlarged Chakra</span></div>
-    </div>
-    <br>
-    <div class="row">
-      <div class="col s3 offset+s6" style="background-color:blue"><span class="flow-text">Info about Chakra</span></div>
-    </div>
-    <br>
-    <div class="row">
-      <div class="col s3 offset+s6" style="background-color:blue"><span class="flow-text">Suggestions</span></div>
-    </div>
-    </div>
-  <div class="row">
-      <div class="col s6 offset-s3" style="background-color:blue"><img src="../Project2/human-body2-512.png" alt="" class="circle responsive-img"></div>
-  </div> -->
-  <script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
+  <script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
 </div>
 </div>
