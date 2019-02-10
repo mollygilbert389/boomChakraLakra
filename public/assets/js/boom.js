@@ -13,13 +13,35 @@ document.addEventListener('DOMContentLoaded', function () {
   var instances = M.FormSelect.init(elems);
   console.log(instances)
 });
-// $(document).ready(function(){ 
-//   $('#modal1').modal('open');
 
-// })
-//   $('#login').on('click', function(event){
-//     event.preventDefault();
-// });
+////////WORKS > have tried to get is on loading the page, but cannot.
+//$(document).ready(function(event) { <<<< tried. Failed. 
+$('#myModal').on('click', function(event) {
+  event.preventDefault();
+  console.log("clicked")
+  $('#myModal').modal('show');
+})
+
+$('#login').on('click', function(event) {
+  event.preventDefault();
+});
+
+$('#login').on('click', function(event) {
+  var firstName = $('#firstName').val();
+  var dayOfBirth = $('#dayOfBirth').val();
+  var monthOfBirth = $('#monthOfBirth').val();
+  var yearOfBirth = $('#yearOfBirth').val();
+  var yourSign = $('#yourSign').val();
+  var email = $('#email').val();
+  console.warn(firstName, yourSign, dayOfBirth, monthOfBirth, yearOfBirth, email);
+  var postObject = {
+    firstName: firstName,
+    dayOfBirth: dayOfBirth,
+    monthOfBirth: monthOfBirth,
+    yearOfBirth: yearOfBirth,
+    email: email
+  }
+})
 
 //end login modal
 
@@ -76,9 +98,10 @@ var content = {
 
 }
 
-var crystals = {
+//Trying to add hover effect with crystals. 
+// var crystals = {
 
-}
+// }
 
 
 $(function () {

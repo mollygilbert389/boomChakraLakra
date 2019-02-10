@@ -1,8 +1,9 @@
 <div id="master">
   <nav style="background-color: white;">
-    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Log In</a>
+    <a class="waves-effect waves-light btn modal-trigger" href="#myModal">Log In</a>
+    
     <!-- Modal Structure -->
-    <div id="modal1" class="modal">
+    <div id="myModal" class="modal">
       <div class="modal-content">
         <h4 style="color:blue">Tell us about yourself!</h4>
       <form>
@@ -69,33 +70,11 @@
     <div class="modal-footer">
       <a href="" id = "login" class="modal-close waves-effect waves-green btn-flat">Agree</a>
     </div>
-     <script>
-//        $(document).ready(function(){
-//      $('#modal1').modal('open');
- //   })
-
-    $('#login').on('click', function(event) {
-      event.preventDefault();
-    });
-
-    $('#login').on('click', function(event) {
-      var firstName = $('#firstName').val();
-      var dayOfBirth = $('#dayOfBirth').val();
-      var monthOfBirth = $('#monthOfBirth').val();
-      var yearOfBirth = $('#yearOfBirth').val();
-      var yourSign = $('#yourSign').val();
-      var email = $('#email').val();
-      console.warn(firstName, yourSign, dayOfBirth, monthOfBirth, yearOfBirth, email);
-      var postObject = {
-        firstName: firstName,
-        dayOfBirth: dayOfBirth,
-        monthOfBirth: monthOfBirth,
-        yearOfBirth: yearOfBirth,
-        email: email
-      }
-    })
-      </script></nav>
+  </div>
+      </nav>
   <br>
+   
+   
     <!-- Page Layout here -->
       <div class="row">
           <div class="col s3">
@@ -121,13 +100,13 @@
             <div class="col s12">
             <div id="container" style="position: relative">
               <div id="screen" style="position: absolute; width: 500px; height: 467px;">
-                <button id="chakraCrown" style="position: absolute; top: 20px; right:230px; background-color:blueviolet; border-radius: 50%; font-size: 20px; color:transparent">Test</button>
-                <button id="thirdEye" style="position: absolute; top: 42px; right:230px; background-color:blue; border-radius: 50%; font-size: 20px; color:transparent">Test</button>
-                <button id="throat" style="position: absolute; top: 102px; right:230px; background-color:rgb(69, 212, 212); border-radius: 50%; font-size: 20px; color:transparent">Test</button>
-                <button id="heart" style="position: absolute; top: 199px; right:230px; background-color:green; border-radius: 50%; font-size: 20px; color:transparent">Test</button>
-                <button id="solarPlexus" style="position: absolute; top: 300px; right:230px; background-color:yellow; border-radius: 50%; font-size: 20px; color:transparent">Test</button>
-                <button id="sacrum" style="position: absolute; top: 355px; right:230px; background-color:orange; border-radius: 50%; font-size: 20px; color:transparent">Test</button>
-                <button id="root" style="position: absolute; top: 405px; right:230px; background-color:red; border-radius: 50%; font-size: 20px; color:transparent">Test</button>
+                <button id="chakraCrown" style="position: absolute; top: 20px; right:230px; background-color: transparent;"><img style="width: 50px; height: 50px;"src="/assets/images/crownchakra.png" ></button>
+                <button id="thirdEye" style="position: absolute; top: 42px; right:230px; font-size: 20px; background-color:transparent"><img style="width: 50px; height: 50px;"src="/assets/images/thirdeyechakra.png" ></button>
+                <button id="throat" style="position: absolute; top: 102px; right:230px; background-color:transparent; font-size: 20px; color:transparent"><img style="width: 50px; height: 50px;"src="/assets/images/throatchakra.png" ></button>
+                <button id="heart" style="position: absolute; top: 199px; right:230px; background-color:transparent; font-size: 20px; color:transparent"><img style="width: 50px; height: 50px;"src="/assets/images/heartchakra.png" ></button>
+                <button id="solarPlexus" style="position: absolute; top: 300px; right:230px; background-color:transparent; font-size: 20px; color:transparent"><img style="width: 50px; height: 50px;"src="/assets/images/solarplexuschakra.png" ></button>
+                <button id="sacrum" style="position: absolute; top: 355px; right:230px; background-color:transparent; font-size: 20px; color:transparent"><img style="width: 50px; height: 50px;"src="/assets/images/sacralchakra.png" ></button>
+                <button id="root" style="position: absolute; top: 405px; right:230px; background-color:transparent; font-size: 20px; color:transparent"><img style="width: 50px; height: 50px;"src="/assets/images/rootchakra.png" ></button>
               </div>
               <img src="/assets/images/test.png" usemap="#image-map" hide-focus="true" height="150%" width="95%">
            <map name="image-map">
