@@ -1,6 +1,6 @@
 body {
     background-image: url("../images/background3.jpg");
-    background-repeat:no-repeat;
+    background-repeat:repeat;
     background-size:200%;
     font-family: 'Encode Sans Condensed', sans-serif;
 }
@@ -8,4 +8,25 @@ body {
 nav {
     position: relative;
     align-content: center;
+    width: 100%;
 }
+a {
+    position: relative;
+    display: inline-block;
+  }
+  
+  a:hover {
+    background-image: url("../images/bloodstone.png")
+  }
+  
+  @media only screen and (min-width: 600px) {
+      body {
+          background-color: blue
+
+      }
+
+  .container {
+     width: 5000px;
+     height: 2200.5px; 
+}
+  }
