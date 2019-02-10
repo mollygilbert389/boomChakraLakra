@@ -6,7 +6,7 @@ var api  = require("./horoscopeAPI")
 module.exports = function(app) {
 
   app.get("/api/:id", function(req, res) {
-    // Find certain user to pull their API info for
+    console.log("api routes connected")
     db.Signs.findOne({
         where: {
             userName: req.params.id
@@ -24,7 +24,6 @@ module.exports = function(app) {
                 res.json(result)
             }
         });
-        // // res.json(dbSign);
       });
     });
 

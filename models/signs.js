@@ -1,4 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
+    console.log("signjs Connected")
     var Signs = sequelize.define("Signs", {
         userName: {
             type: DataTypes.STRING,
@@ -34,11 +35,4 @@ module.exports = function (sequelize, DataTypes) {
     return Signs;
 };
 
-// module.exports = function(sequelize, DataTypes) {
-//     var Signs = sequelize.define("Signs", {
-//         userName: DataTypes.STRING,
-//         dayOfBirth: DataTypes.INTEGER,
 
-//     })
-//     return Signs
-// }

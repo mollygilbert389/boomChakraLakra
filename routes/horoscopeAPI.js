@@ -13,6 +13,7 @@ var http = require('http');
 //pulls from database get requst
 
 var getResponse = (resource, data, callback) => {
+	console.log("horoscope API connected")
 	var url = baseUrl + resource;
 	var auth = "Basic " + new Buffer(userID + ":" + apiKey).toString('base64');
 	request(

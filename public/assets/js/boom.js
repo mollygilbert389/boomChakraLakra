@@ -49,8 +49,47 @@ $('#login').on('click', function(event) {
 // this is the API 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+var hardcodeData = {
+  name: "MollyG",
+  date: "8-3-1990",
+  destiny_number: 3,
+  radical_number:8,
+  name_number:5,
+  evil_num: "3,6",
+  fav_color:"Black",
+  fav_day:"Sunday, Monday, Saturday",
+  fav_god: "Bhairav",
+  fav_mantra: "Om Shang Shanaishcharay Namah",
+  fav_metal: "Iron",
+  fav_stone: "Blue Sapphire",
+  fav_substone: "Amethyst & Blue Tourmaline",
+  friendly_num: "2,1,4",
+  neutral_num: "3,7,9",
+  radical_num: "8",
+  radical_ruler: "Saturn"
+}
 
-//end form to API post
+//for if we get the login working:
+// $.get("/", function(data) {
+//   console.log(data)
+//   if (data.length !== 0) {
+//   for (var i = 0; i < data.length; i++) {
+  $(function () {
+$("#horoscopeBox").append("<h5>" + "You: " + hardcodeData.name + "</h5>")
+$("#horoscopeBox").append("<p>"+ "Your Birthday: " + hardcodeData.date + "</p>")
+$("#horoscopeBox").append("<p>"+ "Your Destiny Number: " + hardcodeData.destiny_number+ "</p>")
+$("#horoscopeBox").append("<p>"+ "Your Evil Number: " + hardcodeData.evil_num+ "</p>")
+$("#horoscopeBox").append("<p>"+ "Your Favorite Day: " + hardcodeData.fav_day+ "</p>")
+$("#horoscopeBox").append("<p>"+ "Your God: " + hardcodeData.fav_god+ "</p>")
+$("#horoscopeBox").append("<p>"+ "Your Metal: " + hardcodeData.fav_metal+ "</p>")
+$("#horoscopeBox").append("<p>"+ "Your Stone: " + hardcodeData.fav_stone+ "</p>")
+$("#horoscopeBox").append("<p>"+ "Your Ruler: " + hardcodeData.radical_ruler+ "</p>")
+
+//snipit incase we want to add classes
+      // var row = $("<div>");
+      // row.addClass("chirp");
+
+})
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -178,7 +217,16 @@ $(function () {
   $("#chakraCrown").hover(function (event) {
     $("#mantra").empty()
     $("#mantra").text(content.crown.mantra)
-  })
+    $("#crystal").empty() //actually empties this
+    // $("#crystal").image(url, )
+    // $('#cyrstal').prepend($('<img>',{id:'crown',src:'/images/amethyst.png'}))
+    // $('#crystal').prepend('<img id="crown" src="./images/amethyst.png" />')
+    // $("#crystal").prepend("<img src=/../images/amethyst.png/>")
+      // mouseOver function
+  //     $("#chakracrown").hover(function (event){
+  //     $('#crownc').show();
+  // })
+    });
 })
 
 $(function () {
@@ -260,22 +308,20 @@ var results = {
 }
 
 $(function () { 
-  $("#sleep").click(function() {
-  $("sleep").toggle(this.checked)
-  })
-  if ($("sleep") = checked) {
-    $("#results").text(results.crownr.results)
-  } else {
-    $("#results").empty()
-  }
+  // $("#sleep").click(function() {
+  // $("#sleep").toggle(this.checked)
+  // })
+  // if ($("#sleep") = checked) {
+  //   $("#results").text(results.crownr.results)
+  // }
 
 
 
-// $("#sleep").click(function() {
-//   $("sleep").toggle(this.checked)
-//   $("#results").empty()
-//   $("#results").text(results.crownr.results)
-// })
+$("#sleep").click(function() {
+  $("#sleep").toggle(this.checked)
+  $("#results").empty()
+  $("#results").text(results.crownr.results)
+})
 // $("#sleep").click(function(){
 //   $("sleep").toggle(this.unchecked);
 //   $("#results").empty()
