@@ -5,11 +5,11 @@ USE sign_db;
 CREATE TABLE Signs
 (
 	id int NOT NULL AUTO_INCREMENT,
-	astro_sign varchar(255) NOT NULL,
 	userName varchar(255) NOT NULL,
 	dayOfBirth INT NULL,
 	monthOfBirth INT NULL,
 	yearOfBirth INT NULL,
+	email varchar(255) NOT NULL,
 	primary key (ID)
 );
 

@@ -6,13 +6,12 @@ var api  = require("./horoscopeAPI")
 module.exports = function(app) {
 
   app.get("/api/:id", function(req, res) {
-    console.log("api routes connected")
     db.Signs.findOne({
         where: {
             userName: req.params.id
         }
       }).then(function(dbSign) {
-        var horoscope = api.numeroCall("numero_table", dbSign["dayOfBirth"], dbSign["monthOfBirth"], dbSign["yearOfBirth"], dbSign["userName"], function(error, result){
+        api.numeroCall("numero_table", dbSign["dayOfBirth"], dbSign["monthOfBirth"], dbSign["yearOfBirth"], dbSign["userName"], function(error, result){
             if(error)
             {
                 console.log("Error returned!!");
@@ -20,18 +19,22 @@ module.exports = function(app) {
             }
             else
             {
-                console.log(result);
                 res.json(result)
             }
         });
       });
     });
 
-  app.post("/api/users", function(req, res) {
-    console.log(req.body);
-    db.signs.create(req.body).then(function(dbUser) {
-      res.json(dbUser);
-    });
+  app.post("/api/post", function(req, res) {
+    db.Signs.create({
+      userName: req.body.userName,
+      dayOfBirth: req.body.dayOfBirth,
+      monthOfBirth: req.body.monthOfBirth,
+      yearOfBirth: req.body.yearOfBirth,
+      email: req.body.email
+    }).then(function(db){
+      res.json(db)
+    })
   });
 };
 
