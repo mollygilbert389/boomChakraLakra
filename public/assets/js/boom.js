@@ -5,91 +5,83 @@
 document.addEventListener('DOMContentLoaded', function () {
   var elems = document.querySelectorAll('.modal');
   var instances = M.Modal.init(elems);
-  console.log(instances)
 });
 
 document.addEventListener('DOMContentLoaded', function () {
   var elems = document.querySelectorAll('select');
   var instances = M.FormSelect.init(elems);
-  console.log(instances)
 });
 
-////////WORKS > have tried to get is on loading the page, but cannot.
-//$(document).ready(function(event) { <<<< tried. Failed. 
-$('#myModal').on('click', function(event) {
+$(window).load(function(event) {
   event.preventDefault();
   console.log("clicked")
-  $('#myModal').modal('show');
+  $('#myModal').modal('open');
 })
 
-$('#login').on('click', function(event) {
-  event.preventDefault();
-});
+// $('#login').on('click', function(event) {
+//   event.preventDefault();
+// });
 
-$('#login').on('click', function(event) {
-  var firstName = $('#firstName').val();
+
+
+
+
+$('#submit').on('click', function(event) {
+  event.preventDefault();
+  var userName = $('#firstName').val();
   var dayOfBirth = $('#dayOfBirth').val();
   var monthOfBirth = $('#monthOfBirth').val();
   var yearOfBirth = $('#yearOfBirth').val();
-  var yourSign = $('#yourSign').val();
+  var astro_sign = $('#yourSign').val();
   var email = $('#email').val();
-  console.warn(firstName, yourSign, dayOfBirth, monthOfBirth, yearOfBirth, email);
   var postObject = {
-    firstName: firstName,
+    userName: userName,
     dayOfBirth: dayOfBirth,
     monthOfBirth: monthOfBirth,
     yearOfBirth: yearOfBirth,
+    astro_sign: astro_sign,
     email: email
   }
+  var modal = $("#myModal");
+    modal.attr("style", "display: none")
+
+  $.post("/api/post",postObject, function(data){
+    getSignData(data)
+  })
 })
 
+
+function getSignData(data) {
+  console.log(data)
+    $.get("/api/"+ data.userName, function(signinfo){
+      DisplayData(signinfo)
+    })
+}
+
+
 //end login modal
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 // this is the API 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-var hardcodeData = {
-  name: "MollyG",
-  date: "8-3-1990",
-  destiny_number: 3,
-  radical_number:8,
-  name_number:5,
-  evil_num: "3,6",
-  fav_color:"Black",
-  fav_day:"Sunday, Monday, Saturday",
-  fav_god: "Bhairav",
-  fav_mantra: "Om Shang Shanaishcharay Namah",
-  fav_metal: "Iron",
-  fav_stone: "Blue Sapphire",
-  fav_substone: "Amethyst & Blue Tourmaline",
-  friendly_num: "2,1,4",
-  neutral_num: "3,7,9",
-  radical_num: "8",
-  radical_ruler: "Saturn"
+
+function DisplayData(data){
+  var hardcodeData = JSON.parse(data)
+  console.log(hardcodeData)
+$("#horoscopeBox").append("<h5>" + "You: " + hardcodeData["name"] + "</h5>")
+$("#horoscopeBox").append("<p>"+ "Your Birthday: " + hardcodeData["date"] + "</p>")
+$("#horoscopeBox").append("<p>"+ "Your Destiny Number: " + hardcodeData["destiny_number"]+ "</p>")
+$("#horoscopeBox").append("<p>"+ "Your Evil Number: " + hardcodeData["evil_num"]+ "</p>")
+$("#horoscopeBox").append("<p>"+ "Your Favorite Day: " + hardcodeData["fav_day"]+ "</p>")
+$("#horoscopeBox").append("<p>"+ "Your God: " + hardcodeData["fav_god"]+ "</p>")
+$("#horoscopeBox").append("<p>"+ "Your Metal: " + hardcodeData["fav_metal"]+ "</p>")
+$("#horoscopeBox").append("<p>"+ "Your Stone: " + hardcodeData["fav_stone"]+ "</p>")
+$("#horoscopeBox").append("<p>"+ "Your Ruler: " + hardcodeData["radical_ruler"]+ "</p>")
+
+
 }
-
-//for if we get the login working:
-// $.get("/", function(data) {
-//   console.log(data)
-//   if (data.length !== 0) {
-//   for (var i = 0; i < data.length; i++) {
-  $(function () {
-$("#horoscopeBox").append("<h5>" + "You: " + hardcodeData.name + "</h5>")
-$("#horoscopeBox").append("<p>"+ "Your Birthday: " + hardcodeData.date + "</p>")
-$("#horoscopeBox").append("<p>"+ "Your Destiny Number: " + hardcodeData.destiny_number+ "</p>")
-$("#horoscopeBox").append("<p>"+ "Your Evil Number: " + hardcodeData.evil_num+ "</p>")
-$("#horoscopeBox").append("<p>"+ "Your Favorite Day: " + hardcodeData.fav_day+ "</p>")
-$("#horoscopeBox").append("<p>"+ "Your God: " + hardcodeData.fav_god+ "</p>")
-$("#horoscopeBox").append("<p>"+ "Your Metal: " + hardcodeData.fav_metal+ "</p>")
-$("#horoscopeBox").append("<p>"+ "Your Stone: " + hardcodeData.fav_stone+ "</p>")
-$("#horoscopeBox").append("<p>"+ "Your Ruler: " + hardcodeData.radical_ruler+ "</p>")
-
-//snipit incase we want to add classes
-      // var row = $("<div>");
-      // row.addClass("chirp");
-
-})
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
