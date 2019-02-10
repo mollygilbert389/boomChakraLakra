@@ -70,9 +70,9 @@
       <a href="" id = "login" class="modal-close waves-effect waves-green btn-flat">Agree</a>
     </div>
      <script>
-        $(document).ready(function(){
-      $('#modal1').modal('open');
-    })
+//        $(document).ready(function(){
+//      $('#modal1').modal('open');
+ //   })
 
     $('#login').on('click', function(event) {
       event.preventDefault();
@@ -103,39 +103,40 @@
                 <br>
                 <br>
               </div>
-              <div class="col s12" style="background-color:blue; border-style: solid; border-width: 5px; border-color: white; padding: 2px;">Chakra Info
-                  The Crown Chakra is located at the very top of the head. It represents spiritual connectedness, concerns inner and outer beauty, and pure bliss.
+              <div id="infoBox"class="col s12" style=" border-style: solid; border-width: 5px; border-color: grey; padding: 2px; border-radius: 8px; margin-bottom: 10px;"> Click a chakra in the center to find out more. 
                   <br>
                   <br>
               </div>
-              <br>
-              <div class="col s12" style="background-color:blue; border-style: solid; border-width: 5px; border-color: white; padding: 2px;">Suggestions
-                  Since the Crown Chakra represents our spiritual connection to our surroundings, this Chakra does not benefit from healing foods. The Crown Chakra is more likely to respond to breathing clean and fresh air, sunshine, and meditation.
+              <div id="tipBox"class="col s12" style="border-style: solid; border-width: 5px; border-color: grey; padding: 2px; border-radius: 8px; margin-bottom: 10px;"> Click a chakra in the center to find out more. 
+                  <br>
+                  <br>
+              </div>
+              <div id="results"class="col s12" style="border-style: solid; border-width: 5px; border-color: grey; padding: 2px; border-radius: 8px; margin-bottom: 10px;"> Check the boxes on the right to see what chakras are blocked. We may have some recommendations.
                   <br>
                   <br>
               </div>
           </div>
           <div class="col s6">
-            <hr>
+            <br>
             <div class="col s12">
             <div id="container" style="position: relative">
               <div id="screen" style="position: absolute; width: 500px; height: 467px;">
-                <button id="chakraCrown" style="position: absolute; top: -10px; right:230px; background-color:blueviolet; border-radius: 50%; font-size: 20px; color:transparent">Test</button>
+                <button id="chakraCrown" style="position: absolute; top: 20px; right:230px; background-color:blueviolet; border-radius: 50%; font-size: 20px; color:transparent">Test</button>
                 <button id="thirdEye" style="position: absolute; top: 42px; right:230px; background-color:blue; border-radius: 50%; font-size: 20px; color:transparent">Test</button>
                 <button id="throat" style="position: absolute; top: 102px; right:230px; background-color:rgb(69, 212, 212); border-radius: 50%; font-size: 20px; color:transparent">Test</button>
                 <button id="heart" style="position: absolute; top: 199px; right:230px; background-color:green; border-radius: 50%; font-size: 20px; color:transparent">Test</button>
                 <button id="solarPlexus" style="position: absolute; top: 300px; right:230px; background-color:yellow; border-radius: 50%; font-size: 20px; color:transparent">Test</button>
-                <button id="sacral" style="position: absolute; top: 355px; right:230px; background-color:orange; border-radius: 50%; font-size: 20px; color:transparent">Test</button>
+                <button id="sacrum" style="position: absolute; top: 355px; right:230px; background-color:orange; border-radius: 50%; font-size: 20px; color:transparent">Test</button>
                 <button id="root" style="position: absolute; top: 405px; right:230px; background-color:red; border-radius: 50%; font-size: 20px; color:transparent">Test</button>
               </div>
-              <img src="/assets/images/LotusPose copy.png" usemap="#image-map" hide-focus="true">
+              <img src="/assets/images/test.png" usemap="#image-map" hide-focus="true" height="150%" width="95%">
            <map name="image-map">
           <area id="one" target="_blank" alt="ChakraCrown" title="ChakraCrown" href="index.handlebars" coords="240,9,10" shape="circle">
           <area target="_top" alt="ThirdEye" title="ThirdEye" href="index.handlebars" coords="240,52,10" shape="circle">
           <area target="_top" alt="Throat" title="Throat" href="index.handlebars" coords="240,142,10" shape="circle">
           <area target="_top" alt="Heart" title="Heart" href="index.handlebars" coords="240,204,10" shape="circle">
           <area target="_top" alt="SolarPlexus" title="SolarPlexus" href="index.handlebars" coords="240,307,10" shape="circle">
-          <area target="_top" alt="Sacral" title="Sacral" href="index.handlebars" coords="240,355,10" shape="circle">
+          <area target="_top" alt="sacrum" title="sacrum" href="index.handlebars" coords="240,355,10" shape="circle">
           <area target="_top" alt="Root" title="Root" href="" coords="240,405,10" shape="circle">
              </map>
            </canvas>
@@ -143,105 +144,100 @@
       </div>
             <br>
             <br>
-            <div class="col s12">Mantra: "I AM.."</div>
+            <div id="mantra" class="col s12" style="font-size: 50px;"></div>
           </div>
           <div class="col s3">
-            <div id=class="col s12" style="background-color:blue; border-style: solid; border-width: 5px; border-color: white; padding: 2px;">Horoscope
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel hendrerit mauris, vel congue eros. Sed varius ornare malesuada.
+            <div id="horoscopeBox" class="col s12" style="border-style: solid; border-width: 5px; border-color: grey; padding: 2px; border-radius: 8px">
             <br>
             </div>
             <br>
             <div class="col s12" form action="#"> Personal Issues
               <p>
-                <label>
+                <label id="sleep">
                   <input type="checkbox"/>
                   <span>Sleep</span>
                 </label>
-                <label>
+                <label id="asthma">
                   <input type="checkbox"/>
                   <span>Asthma or Allergies</span>
                 </label>
-                <label>
+                <label id="eyesight">
                   <input type="checkbox"/>
                   <span>Eyesight</span>
                 </label>
-                <label>
+                <label id="poorIntuition">
                   <input type="checkbox"/>
                   <span>Poor Intuition</span>
                 </label>
-                <label>
+                <label id="soreThroat">
                   <input type="checkbox"/>
                   <span>Sore Throat</span>
                 </label>
-                <label>
+                <label id="thyroidProblems">
                   <input type="checkbox"/>
                   <span>Thyroid Problems</span>
                 </label>
-                <label>
+                <label id="concentration">
                   <input type="checkbox"/>
                   <span>Concentration</span>
                 </label>
-                <label>
+                <label id="fear">
                   <input type="checkbox"/>
                   <span>Fear of Intimacy</span>
                 </label>
-                <label>
+                <label id="gas">
                   <input type="checkbox"/>
                   <span>Gas or Bloating</span>
                 </label>
-                <label>
+                <label id="eatingDis">
                   <input type="checkbox"/>
                   <span>Eating Disorders</span>
                 </label>
-                <label>
+                <label id="procrastination">
                   <input type="checkbox"/>
                   <span>Procrastination</span>
                 </label>
-                <label>
+                <label id="alienation">
                   <input type="checkbox"/>
                   <span>Alienation</span>
                 </label>
-                <label>
+                <label id="heart">
                   <input type="checkbox"/>
                   <span>Heart or Lung Problems</span>
                 </label>
-                <label>
+                <label id="hipPain">
                   <input type="checkbox"/>
                   <span>Hip Pain</span>
                 </label>
-                <label>
+                <label id="sexDis">
                   <input type="checkbox"/>
                   <span>Sexual Dysfunction</span>
                 </label>
-                <label>
+                <label "depression">
                   <input type="checkbox"/>
                   <span>Depression</span>
                 </label>
-                <label>
+                <label id="creativeBlocks">
                   <input type="checkbox"/>
                   <span>Creative Blocks</span>
                 </label>
-                <label>
+                <label id="colonIssues">
                   <input type="checkbox"/>
                   <span>Colon Issues</span>
                 </label>
-                <label>
+                <label id="lowerBack">
                   <input type="checkbox"/>
                   <span>Lower Back Pain</span>
                 </label>
-                <label>
+                <label id="varicoseVeins">
                   <input type="checkbox"/>
                   <span>Varicose Veins</span>
                 </label>
-                <label>
+                <label id="difficult">
                   <input type="checkbox"/>
                   <span>Difficult Self-Expression</span>
                 </label>
               </p>
-            <br>
-            </div>
-            <div class="col s12" style="background-color:blue; border-style: solid; border-width: 5px; border-color: white; padding: 2px;">Top 3 Chakras
-                
             <br>
             </div>
           </div>

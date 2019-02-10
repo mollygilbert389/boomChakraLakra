@@ -1,3 +1,10 @@
+body {
+    background-image: url("../images/background3.jpg");
+    background-repeat:no-repeat;
+    background-size:200%;
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+
 nav {
     position: relative;
     align-content: center;
