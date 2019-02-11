@@ -1,5 +1,5 @@
 <div id="master">
-  <nav style="background-color: white;">
+  <nav style="background-color: transparent; border: none">
     <a class="waves-effect waves-light btn modal-trigger" href="#myModal">Log In</a>
     
     <!-- Modal Structure -->
@@ -71,62 +71,13 @@
       <a href="" id = "login" class="modal-close waves-effect waves-green btn-flat">Agree</a>
     </div>
   </div>
+      
       </nav>
   <br>
    
    
     <!-- Page Layout here -->
       <div class="row">
-          <div class="col s3">
-              <div class="col s12" img src="https://via.placeholder.com/150" alt="chakra placeholder">
-                <br>
-                <br>
-              </div>
-              <div id="infoBox"class="col s12" style=" border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; margin-bottom: 10px; color: grey; text-align: center"> Click a chakra in the center to find out more. 
-                  <br>
-                  <br>
-              </div>
-              <div id="tipBox"class="col s12" style="border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; margin-bottom: 10px; color: grey; text-align: center"> Click a chakra in the center to find out more. 
-                  <br>
-                  <br>
-              </div>
-              <div id="crystal"class="col s12" style="border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; margin-bottom: 10px; color: grey; text-align:center"> Hover over a chakra to see it's crystal
-                <a href="#"><img src=''/></a>
-                  <br>
-                  <br>
-              </div>
-          </div>
-          <div class="col s6">
-            <br>
-            <div class="col s12">
-            <div id="container" style="position: relative">
-              <div id="screen" style="position: absolute; width: 500px; height: 467px;">
-                <button id="chakraCrown" class="chakraCrown" style="position: absolute; top: 195px; right:230px; background-color: transparent; border: none;"><img style="width: 50px; height: 50px;"src="/assets/images/crownchakra.png" ></button>
-                <button id="thirdEye" style="position: absolute; top: 250px; right:230px; font-size: 20px; background-color:transparent; border: none;"><img style="width: 50px; height: 50px;"src="/assets/images/thirdeyechakra.png" ></button>
-                <button id="throat" style="position: absolute; top: 325px; right:230px; background-color:transparent; font-size: 20px; color:transparent; border: none"><img style="width: 50px; height: 50px;"src="/assets/images/throatchakra.png" ></button>
-                <button id="heart" style="position: absolute; top: 385px; right:230px; background-color:transparent; font-size: 20px; color:transparent; border: none;"><img style="width: 50px; height: 50px;"src="/assets/images/heartchakra.png" ></button>
-                <button id="solarPlexus" style="position: absolute; top: 455px; right:230px; background-color:transparent; font-size: 20px; color:transparent; border: none;"><img style="width: 50px; height: 50px;"src="/assets/images/solarplexuschakra.png" ></button>
-                <button id="sacrum" style="position: absolute; top: 533px; right:230px; background-color:transparent; font-size: 20px; color:transparent; border: none;"><img style="width: 50px; height: 50px;"src="/assets/images/sacralchakra.png" ></button>
-                <button id="root" style="position: absolute; top: 600px; right:230px; background-color:transparent; color:transparent; border: none;"><img style="width: 50px; height: 50px;"src="/assets/images/rootchakra.png" ></button>
-                     <img class="image"src="/assets/images/test.png" usemap="#image-map" hide-focus="true" height="150%" width="95%">
-              </div>
-              
-           <map name="image-map">
-          <area id="one" target="_blank" alt="ChakraCrown" title="ChakraCrown" href="index.handlebars" coords="240,9,10" shape="circle">
-          <area target="_top" alt="ThirdEye" title="ThirdEye" href="index.handlebars" coords="240,52,10" shape="circle">
-          <area target="_top" alt="Throat" title="Throat" href="index.handlebars" coords="240,142,10" shape="circle">
-          <area target="_top" alt="Heart" title="Heart" href="index.handlebars" coords="240,204,10" shape="circle">
-          <area target="_top" alt="SolarPlexus" title="SolarPlexus" href="index.handlebars" coords="240,307,10" shape="circle">
-          <area target="_top" alt="sacrum" title="sacrum" href="index.handlebars" coords="240,355,10" shape="circle">
-          <area target="_top" alt="Root" title="Root" href="" coords="240,405,10" shape="circle">
-             </map>
-           </canvas>
-        </div>
-        <br>
-            <br>
-            <div id="mantra" class="col s12" style="font-size: 50px;"></div>
-      </div>
-          </div>
           <div class="col s3">
             <div id="horoscopeBox" class="col s12" style="border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; color: grey; margin-bottom: 10px">
             <br>
@@ -226,8 +177,61 @@
             <br>
             </div>
           </div>
+          <div class="col s6">
+            <br>
+            <div class="col l12">
+            <div id="container" style="position: relative">
+              <div id="screen" style="position: absolute; width: 500px; height: 467px;">
+                <button id="chakraCrown" class="chakraCrown" style="position: absolute; top: 195px; right:230px; background-color: transparent; border: none;"><img style="width: 50px; height: 50px;"src="/assets/images/crownchakra.png" ></button>
+                <button id="thirdEye" style="position: absolute; top: 250px; right:230px; font-size: 20px; background-color:transparent; border: none;"><img style="width: 50px; height: 50px;"src="/assets/images/thirdeyechakra.png" ></button>
+                <button id="throat" style="position: absolute; top: 325px; right:230px; background-color:transparent; font-size: 20px; color:transparent; border: none"><img style="width: 50px; height: 50px;"src="/assets/images/throatchakra.png" ></button>
+                <button id="heart" style="position: absolute; top: 385px; right:230px; background-color:transparent; font-size: 20px; color:transparent; border: none;"><img style="width: 50px; height: 50px;"src="/assets/images/heartchakra.png" ></button>
+                <button id="solarPlexus" style="position: absolute; top: 455px; right:230px; background-color:transparent; font-size: 20px; color:transparent; border: none;"><img style="width: 50px; height: 50px;"src="/assets/images/solarplexuschakra.png" ></button>
+                <button id="sacrum" style="position: absolute; top: 533px; right:230px; background-color:transparent; font-size: 20px; color:transparent; border: none;"><img style="width: 50px; height: 50px;"src="/assets/images/sacralchakra.png" ></button>
+                <button id="root" style="position: absolute; top: 600px; right:230px; background-color:transparent; color:transparent; border: none;"><img style="width: 50px; height: 50px;"src="/assets/images/rootchakra.png" ></button>
+                     <img src="/assets/images/test.png" usemap="#image-map" hide-focus="true" height="150%" width="95%">
+              </div>
+              
+           <map name="image-map">
+          <area id="one" target="_blank" alt="ChakraCrown" title="ChakraCrown" href="index.handlebars" coords="240,9,10" shape="circle">
+          <area target="_top" alt="ThirdEye" title="ThirdEye" href="index.handlebars" coords="240,52,10" shape="circle">
+          <area target="_top" alt="Throat" title="Throat" href="index.handlebars" coords="240,142,10" shape="circle">
+          <area target="_top" alt="Heart" title="Heart" href="index.handlebars" coords="240,204,10" shape="circle">
+          <area target="_top" alt="SolarPlexus" title="SolarPlexus" href="index.handlebars" coords="240,307,10" shape="circle">
+          <area target="_top" alt="sacrum" title="sacrum" href="index.handlebars" coords="240,355,10" shape="circle">
+          <area target="_top" alt="Root" title="Root" href="" coords="240,405,10" shape="circle">
+             </map>
+           </canvas>
+        </div>
+        <br>
+            <br>
+            <div id="mantra" class="col s12" style="font-size: 50px;"></div>
+      </div>
+          </div>
+          
+            <div class="col s3">
+              <div class="col s12" img src="https://via.placeholder.com/150" alt="chakra placeholder">
+                <br>
+                <br>
+              </div>
+              <div id="infoBox"class="col s12" style=" border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; margin-bottom: 10px; color: grey; text-align: center"> Click a chakra in the center to find out more. 
+                  <br>
+                  <br>
+              </div>
+              <div id="tipBox"class="col s12" style="border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; margin-bottom: 10px; color: grey; text-align: center"> Click a chakra in the center to find out more. 
+                  <br>
+                  <br>
+              </div>
+              <div id="crystal"class="col s12" style="border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; margin-bottom: 10px; color: grey; text-align:center"> Hover over a chakra to see it's crystal
+                <a href="#"><img src=''/></a>
+                  <br>
+                  <br>
+              </div>
+          </div>
+          </div>
         </div>
   </div>
   <script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
 </div>
 </div>
+<button><a class="btn" href="#">Log Out</a></button>
