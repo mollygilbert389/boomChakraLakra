@@ -129,12 +129,6 @@ var content = {
 
 }
 
-//Trying to add hover effect with crystals. 
-// var crystals = {
-
-// }
-
-
 $(function () {
   $("#chakraCrown").on("click", function (event) {
     console.log("I've been clicked")
@@ -297,10 +291,11 @@ var results = {
     results: " Eat more apples, roots, proteins & beets. ",
   }
 }
+
 function helper(help) {
   (resultz.includes(help)) ?
     void (0) :
-    (resultz.push(help), $("#results").append(help))
+    (resultz.push(help), $("#results").append(help), $("#instructBox").text("Here are your results."))
 }
 var resultz = []
 $(document).ready(function () {

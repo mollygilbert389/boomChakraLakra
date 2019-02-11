@@ -20,18 +20,18 @@
             <div class="row">
               <div class="input-field col s2">
              
-                <input id="dayOfBirth" type="number" class="validate" ng-pattern="onlyNumbers" placeholder="01" min="3" max="3">
+                <input id="dayOfBirth" type="number" class="validate" ng-pattern="onlyNumbers" placeholder="01" min="00" max="31">
                 <label for="dayOfBirth">Day of Birth</label>
             
             </div>
             
               <div class="input-field col s2">  
-               <input id="monthOfBirth" type="number" class="validate" ng-pattern="onlyNumbers" placeholder="01" min="2" max="3">
+               <input id="monthOfBirth" type="number" class="validate" ng-pattern="onlyNumbers" placeholder="01" min="00" max="12">
                 <label for="monthOfBirth">Month of Birth</label>
                 </div>
                 
               <div class="input-field col s2">  
-               <input id="yearOfBirth" type="number" class="validate" placeholder="1992" min="4" max="5">
+               <input id="yearOfBirth" type="number" class="validate" placeholder="1992" min="1900" max="2019">
                 <label for="yearOfBirth">Year of Birth</label>
                </div>
                 
@@ -80,28 +80,24 @@
           <div class="col s3">
               <div class="col s12" img src="https://via.placeholder.com/150" alt="chakra placeholder">
                 <br>
-                <br>
+               
               </div>
               <div id="infoBox"class="col s12" style=" border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; margin-bottom: 10px; color: grey;"> Click a chakra in the center to find out more. 
                   <br>
-                  <br>
+                  
               </div>
               <div id="tipBox"class="col s12" style="border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; margin-bottom: 10px; color: grey;"> Click a chakra in the center to find out more. 
                   <br>
+                
+              </div>
+               <div id="instructBox"class="col s12" style="border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; margin-bottom: 10px; color: grey;"> Check the boxes on the right to see what chakras are blocked. We may have some recommendations.
+                  <br>
                   <br>
               </div>
-              <div id="results"class="col s12" style="border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; margin-bottom: 10px; color: grey;"> Check the boxes on the right to see what chakras are blocked. We may have some recommendations.
-                  <br>
-                  <br>
+              <div id="results"class="col s12" style="border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; margin-bottom: 10px; color: grey;"> 
+                 
               </div>
           <div id= "crystal" style="height: 150px; width: 150px;">
-           {{!-- <img id= "crownc"src="/assets/images/amethyst.png">
-           <img id= "thirdEyec" src="/assets/images/lapislazulu.png">
-           <img id= "throatc" src="/assets/images/blueagate.png">
-           <img id= "heartc" src="/assets/images/jade.png">
-           <img id= "solarPlexusc" src="/assets/images/citrine.png">
-           <img id= "sacrum" src="/assets/images/carnelian.png">
-           <img id= "rootc" src="/assets/images/bloodstone.png"> --}}
           </div>
           </div>
           <div class="col s6">
