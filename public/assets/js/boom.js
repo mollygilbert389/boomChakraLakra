@@ -269,54 +269,126 @@ $(function () {
 
 var results = {
   crownr: {
-  chakra: "Crown",
-  results: "Work on: Getting fresh air, sunlight & nature. Try Meditation.",
+    chakra: "Crown",
+    results: " Work on: Getting fresh air, sunlight & nature. Try Meditation. ",
   },
   thirdEyer: {
     chakra: "Third Eye",
-    results: "Eat more grapes, blueberries, plums & purple potatoes",
+    results: " Eat more grapes, blueberries, plums & purple potatoes. ",
   },
   throatr: {
     chakra: "Throat",
-    results: "Eat more blueberries, figs & kelp. Drink more water.",
+    results: " Eat more blueberries, figs & kelp. Drink more water. ",
   },
   heartr: {
     chakra: "Heart",
-    results: "Eat more broccoli, kale, leafy greens & kiwi.",
+    results: " Eat more broccoli, kale, leafy greens & kiwi. ",
   },
   solarPlexusr: {
     chakra: "Solar Plexus",
-    results: "Eat more lentils, squash, grains & bananas.",
+    results: " Eat more lentils, squash, grains & bananas. ",
   },
   sacrumr: {
     chakra: "Sacrum",
-    results: "Eat more seeds & nuts, oranges, carrots & pumpkins.",
+    results: " Eat more seeds & nuts, oranges, carrots & pumpkins. ",
   },
   rootr: {
     chakra: "Root",
-    results: "Eat more apples, roots, proteins & beets.",
-  },
-
+    results: " Eat more apples, roots, proteins & beets. ",
+  }
 }
-
-$(function () { 
-  // $("#sleep").click(function() {
-  // $("#sleep").toggle(this.checked)
-  // })
-  // if ($("#sleep") = checked) {
-  //   $("#results").text(results.crownr.results)
-  // }
-
-
-
-$("#sleep").click(function() {
-  $("#sleep").toggle(this.checked)
-  $("#results").empty()
-  $("#results").text(results.crownr.results)
+function helper(help) {
+  (resultz.includes(help)) ?
+    void (0) :
+    (resultz.push(help), $("#results").append(help))
+}
+var resultz = []
+$(document).ready(function () {
+  $("#sleep").bind().on("click", function (e) {
+    $(this).unbind('click');
+    helper(results.crownr.results)
+  })
+  $("#asthma").bind().on("click", function (e) {
+    $(this).unbind('click');
+    helper(results.crownr.results)
+  })
+  $("#poorIntuition").bind().on("click", function (e) {
+    $(this).unbind('click');
+    helper(results.thirdEyer.results)
+  })
+  $("#soreThroat").bind().on("click", function (e) {
+    $(this).unbind('click');
+    helper(results.throatr.results)
+  })
+  $("#thyroidProblems").bind().on("click", function (e) {
+    $(this).unbind('click');
+    helper(results.throatr.results)
+  })
+  $("#concentration").bind().on("click", function (e) {
+    $(this).unbind('click');
+    helper(results.crownr.results)
+  })
+  $("#fear").bind().on("click", function (e) {
+    $(this).unbind('click');
+    helper(results.heartr.results)
+  })
+  $("#gas").bind().on("click", function (e) {
+    $(this).unbind('click');
+    helper(results.solarPlexusr.results)
+  })
+  $("#eatingDis").bind().on("click", function (e) {
+    $(this).unbind('click');
+    helper(results.solarPlexusr.results)
+  })
+  $("#concentration").bind().on("click", function (e) {
+    $(this).unbind('click');
+    helper(results.crownr.results)
+  })
+  $("#procrastination").bind().on("click", function (e) {
+    $(this).unbind('click');
+    helper(results.solarPlexusr.results)
+  })
+  $("#alienation").bind().on("click", function (e) {
+    $(this).unbind('click');
+    helper(results.crownr.results)
+  })
+  $("#heart").bind().on("click", function (e) {
+    $(this).unbind('click');
+    helper(results.heartr.results)
+  })
+  $("#hipPain").bind().on("click", function (e) {
+    $(this).unbind('click');
+    helper(results.sacrumr.results)
+  })
+  $("#sexDis").bind().on("click", function (e) {
+    $(this).unbind('click');
+    helper(results.sacrumr.results)
+  })
+  $("#depression").bind().on("click", function (e) {
+    $(this).unbind('click');
+    helper(results.thirdEyer.results)
+  })
+  $("#creativeBlocks").bind().on("click", function (e) {
+    $(this).unbind('click');
+    helper(results.sacrumr.results)
+  })
+  $("#colonIssues").bind().on("click", function (e) {
+    $(this).unbind('click');
+    helper(results.rootr.results)
+  })
+  $("#lowerBack").bind().on("click", function (e) {
+    $(this).unbind('click');
+    helper(results.rootr.results)
+  })
+  $("#varicoseVeins").bind().on("click", function (e) {
+    $(this).unbind('click');
+    helper(results.rootr.results)
+  })
+  $("#difficult").bind().on("click", function (e) {
+    $(this).unbind('click');
+    helper(results.throatr.results)
+  })
 })
-// $("#sleep").click(function(){
-//   $("sleep").toggle(this.unchecked);
-//   $("#results").empty()
-})
+
 
 
