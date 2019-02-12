@@ -1,5 +1,5 @@
 <div id="master">
-  <nav style="background-color: transparent; border: none">
+  <nav style="background-color: transparent; border: none; height: 1px; margin-bottom: 50px;">
     <a class="waves-effect waves-light btn modal-trigger" href="#myModal">Log In</a>
 
     <!-- Modal Structure -->
@@ -169,9 +169,8 @@
             <button id="throat"
               style="position: absolute; top: 325px; right:225px; background-color:transparent; font-size: 20px; color:transparent; border: none"><img
                 style="width: 50px; height: 50px;" src="/assets/images/throatchakra.png"></button>
-            <button id="heart"
-              style="position: absolute; top: 385px; right:225px; background-color:transparent; font-size: 20px; color:transparent; border: none;"><img
-                style="width: 50px; height: 50px;" src="/assets/images/heartchakra.png"></button>
+            <button id="heartbutton"
+              style="position: absolute; top: 385px; right:225px; background-color: transparent; font-size: 20px; color:transparent; border: none;"> <img style="width: 50px; height: 50px;" src="/assets/images/heartchakra.png"></button>
             <button id="solarPlexus"
               style="position: absolute; top: 455px; right:225px; background-color:transparent; font-size: 20px; color:transparent; border: none;"><img
                 style="width: 50px; height: 50px;" src="/assets/images/solarplexuschakra.png"></button>
@@ -200,15 +199,15 @@
         </div>
         <br>
         <br>
-        <div id="mantra" class="col s12" style="font-size: 50px;"></div>
+        <div id="mantra" class="col s12" style="font-size: 50px; text-align: right;"></div>
       </div>
     </div>
 
     <div class="col s3">
-      <div class="col s12" img src="https://via.placeholder.com/150" alt="chakra placeholder">
+      {{!-- <div class="col s12"> <img src="https://via.placeholder.com/150" alt="chakra placeholder">
         <br>
         <br>
-      </div>
+      </div> --}}
       <div id="horoscopeBox" class="col s12" style="border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; color: #5a5a5a; margin-bottom: 10px"> 
       </div>
       <div id="infoBox" class="col s12"

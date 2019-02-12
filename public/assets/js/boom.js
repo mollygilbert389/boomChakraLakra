@@ -143,7 +143,7 @@ $(function () {
 })
 
 $(function () {
-  $("#heart").on("click", function (event) {
+  $("#heartbutton").on("click", function (event) {
     console.log("I've been clicked")
     $("#infoBox").empty()
     $("#tipBox").empty()
@@ -205,7 +205,7 @@ $(function () {
 })
 
 $(function () {
-  $("#heart").hover(function (event) {
+  $("#heartbutton").hover(function (event) {
     $("#mantra").empty()
     $("#mantra").text(content.heart.mantra)
   })
