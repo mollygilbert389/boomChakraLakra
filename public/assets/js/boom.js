@@ -24,8 +24,6 @@ $(window).load(function(event) {
 
 
 
-
-
 $('#submit').on('click', function(event) {
   event.preventDefault();
   var userName = $('#firstName').val();
