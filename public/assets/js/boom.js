@@ -18,12 +18,6 @@ $(window).load(function(event) {
   $('#myModal').modal('open');
 })
 
-// $('#login').on('click', function(event) {
-//   event.preventDefault();
-// });
-
-
-
 $('#submit').on('click', function(event) {
   event.preventDefault();
   var userName = $('#firstName').val();
@@ -55,32 +49,25 @@ function getSignData(data) {
       DisplayData(signinfo)
     })
 }
-
-
 //end login modal
-
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 // this is the API 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
 function DisplayData(data){
   var hardcodeData = JSON.parse(data)
   console.log(hardcodeData)
-$("#horoscopeBox").append("<h5>" + "You: " + hardcodeData["name"] + "</h5>")
-$("#horoscopeBox").append("<p>"+ "Your Birthday: " + hardcodeData["date"] + "</p>")
-$("#horoscopeBox").append("<p>"+ "Your Destiny Number: " + hardcodeData["destiny_number"]+ "</p>")
-$("#horoscopeBox").append("<p>"+ "Your Evil Number: " + hardcodeData["evil_num"]+ "</p>")
-$("#horoscopeBox").append("<p>"+ "Your Favorite Day: " + hardcodeData["fav_day"]+ "</p>")
-$("#horoscopeBox").append("<p>"+ "Your God: " + hardcodeData["fav_god"]+ "</p>")
-$("#horoscopeBox").append("<p>"+ "Your Metal: " + hardcodeData["fav_metal"]+ "</p>")
-$("#horoscopeBox").append("<p>"+ "Your Stone: " + hardcodeData["fav_stone"]+ "</p>")
-$("#horoscopeBox").append("<p>"+ "Your Ruler: " + hardcodeData["radical_ruler"]+ "</p>")
-
-
+$("#horoscopeBox").append("<h6>" + "You: " + hardcodeData["name"] + "</h6>")
+$("#horoscopeBox").append("Your Birthday: " + hardcodeData["date"] + "<br>")
+$("#horoscopeBox").append("Your Destiny Number: " + hardcodeData["destiny_number"]+ "<br>")
+$("#horoscopeBox").append("Your Evil Number: " + hardcodeData["evil_num"]+ "<br>")
+$("#horoscopeBox").append("Your Favorite Day: " + hardcodeData["fav_day"]+ "<br>")
+$("#horoscopeBox").append("Your God: " + hardcodeData["fav_god"]+ "<br>")
+$("#horoscopeBox").append("Your Metal: " + hardcodeData["fav_metal"]+ "<br>")
+$("#horoscopeBox").append("Your Stone: " + hardcodeData["fav_stone"]+ "<br>")
+$("#horoscopeBox").append("Your Ruler: " + hardcodeData["radical_ruler"]+ "<br>")
 }
-
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 // these are the chakra button
@@ -122,9 +109,7 @@ var content = {
     info: "The Root Chakra is located at the base of the spine in the tailbone area. It represents our foundation and being grounded, and concerns financial independence, money, and food.",
     tip: "Try the Bridge Pose or just ground yourself by standing barefoot on earth or grass. The Root Chakra benefits from hot spices, animal proteins, roots (especially ginger), as well as apples, and beets.",
     mantra: "I am.."
-
   }
-
 }
 
 $(function () {
@@ -201,15 +186,7 @@ $(function () {
   $("#chakraCrown").hover(function (event) {
     $("#mantra").empty()
     $("#mantra").text(content.crown.mantra)
-    $("#crystal").empty() //actually empties this
-    // $("#crystal").image(url, )
-    // $('#cyrstal').prepend($('<img>',{id:'crown',src:'/images/amethyst.png'}))
-    // $('#crystal').prepend('<img id="crown" src="./images/amethyst.png" />')
-    // $("#crystal").prepend("<img src=/../images/amethyst.png/>")
-      // mouseOver function
-  //     $("#chakracrown").hover(function (event){
-  //     $('#crownc').show();
-  // })
+    $("#crystal").empty()
     });
 })
 
@@ -262,38 +239,38 @@ $(function () {
 var results = {
   crownr: {
     chakra: "Crown",
-    results: " Work on: Getting fresh air, sunlight & nature. Try Meditation. ",
+    results: " The crown chakra is blocked. Work on: Getting fresh air, sunlight & nature. Try Meditation. ",
   },
   thirdEyer: {
     chakra: "Third Eye",
-    results: " Eat more grapes, blueberries, plums & purple potatoes. ",
+    results: " The third eye chakra is blocked. Eat more grapes, blueberries, plums & purple potatoes. ",
   },
   throatr: {
     chakra: "Throat",
-    results: " Eat more blueberries, figs & kelp. Drink more water. ",
+    results: " The throat chakra is blocked. Eat more blueberries, figs & kelp. Drink more water. ",
   },
   heartr: {
     chakra: "Heart",
-    results: " Eat more broccoli, kale, leafy greens & kiwi. ",
+    results: " The heart chakra is blocked. Eat more broccoli, kale, leafy greens & kiwi. ",
   },
   solarPlexusr: {
     chakra: "Solar Plexus",
-    results: " Eat more lentils, squash, grains & bananas. ",
+    results: " The solar plexus chakra is blocked. Eat more lentils, squash, grains & bananas. ",
   },
   sacrumr: {
     chakra: "Sacrum",
-    results: " Eat more seeds & nuts, oranges, carrots & pumpkins. ",
+    results: " The sacrum chakra is blocked. Eat more seeds & nuts, oranges, carrots & pumpkins. ",
   },
   rootr: {
     chakra: "Root",
-    results: " Eat more apples, roots, proteins & beets. ",
+    results: " The root chakra is blocked. Eat more apples, roots, proteins & beets. ",
   }
 }
 
 function helper(help) {
   (resultz.includes(help)) ?
     void (0) :
-    (resultz.push(help), $("#results").append(help), $("#instructBox").text("Here are your results."))
+    (resultz.push(help), $("#results").append(help), $("#instructBox").text("Please see your recommendations below: "))
 }
 var resultz = []
 $(document).ready(function () {
@@ -380,6 +357,10 @@ $(document).ready(function () {
   $("#difficult").bind().on("click", function (e) {
     $(this).unbind('click');
     helper(results.throatr.results)
+  })
+  $("#eyesight").bind().on("click", function (e) {
+    $(this).unbind('click');
+    helper(results.thirdEyer.results)
   })
 })
 

@@ -1,161 +1,86 @@
 <div id="master">
-  <nav style="background-color: white;">
+  <nav style="background-color: transparent; border: none">
     <a class="waves-effect waves-light btn modal-trigger" href="#myModal">Log In</a>
-    
+
     <!-- Modal Structure -->
     <div id="myModal" class="modal">
       <div class="modal-content">
-        <h4 style="color:blue">Tell us about yourself!</h4>
-      <form>
-        <div class="row">
-          <form class="col s6">
-            <div class="row">
-              <div class="input-field col s6">
-                <input id="firstName" type="text" class="validate">
-                <label for="firstName">First Name</label>
+        <h4 style="color: #5a5a5a">Tell us about yourself!</h4>
+        <form>
+          <div class="row">
+            <form class="col s6">
+              <div class="row">
+                <div class="input-field col s4">
+                  <input id="firstName" type="text" class="validate">
+                  <label for="firstName">First Name</label>
+                </div>
+              
+              <div class="row">
+                <div class="input-field col s4">
+                  <input id="email" type="email" class="validate">
+                  <label for="email">Email</label>
+                </div>
               </div>
-              </div>
-          
-          <form class="col s6">
-            <div class="row">
               <div class="input-field col s2">
-             
-                <input id="dayOfBirth" type="number" class="validate" ng-pattern="onlyNumbers" placeholder="01" min="00" max="31">
-                <label for="dayOfBirth">Day of Birth</label>
-            
-            </div>
-            
-              <div class="input-field col s2">  
-               <input id="monthOfBirth" type="number" class="validate" ng-pattern="onlyNumbers" placeholder="01" min="00" max="12">
+                <input id="monthOfBirth" type="number" class="validate" ng-pattern="onlyNumbers" placeholder="01"
+                  min="00" max="12">
                 <label for="monthOfBirth">Month of Birth</label>
-                </div>
-                
-              <div class="input-field col s2">  
-               <input id="yearOfBirth" type="number" class="validate" placeholder="1992" min="1900" max="2019">
-                <label for="yearOfBirth">Year of Birth</label>
-               </div>
-                
-                
-            <div class="row">
-              <div class="input-field col s12">
-                <div class="input-field col s12">
-                  <select id="yourSign">
-                    <option value="" disabled selected>Choose Your Sign</option>
-                    <option>Aries</option>
-                    <option>Taurus</option>
-                    <option>Gemini</option>
-                    <option>Libra</option>
-                    <option>Scorpio</option>
-                    <option>Sagittarius</option>
-                    <option>Cancer</option>
-                    <option>Leo</option>
-                    <option>Virgo</option>
-                    <option>Capricorn</option>
-                    <option>Aquarius</option>
-                    <option>Pisces</option>
-                  </select>
-                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
-                <label for="email">Email</label>
-              </div>
-            </div>
-          </form>
-        </div>
-      </form>
-    </div>
-    <div class="modal-footer">
-      <button  id ="submit" class="modal-close waves-effect waves-green btn-flat">Agree</button>
-    </div>
-  </div>
-      </nav>
-  <br>
-   
-   
-    <!-- Page Layout here -->
-      <div class="row">
-          <div class="col s3">
-              <div class="col s12" img src="https://via.placeholder.com/150" alt="chakra placeholder">
-                <br>
-               
-              </div>
-              <div id="infoBox"class="col s12" style=" border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; margin-bottom: 10px; color: grey;"> Click a chakra in the center to find out more. 
-                  <br>
-                  
-              </div>
-              <div id="tipBox"class="col s12" style="border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; margin-bottom: 10px; color: grey;"> Click a chakra in the center to find out more. 
-                  <br>
-                
-              </div>
-               <div id="instructBox"class="col s12" style="border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; margin-bottom: 10px; color: grey;"> Check the boxes on the right to see what chakras are blocked. We may have some recommendations.
-                  <br>
-                  <br>
-              </div>
-              <div id="results"class="col s12" style="border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; margin-bottom: 10px; color: grey;"> 
-                 
-              </div>
-          <div id= "crystal" style="height: 150px; width: 150px;">
+              <form class="col s5">
+                <div class="row">
+                  <div class="input-field col s2">
+                    <input id="dayOfBirth" type="number" class="validate" ng-pattern="onlyNumbers" placeholder="01"
+                      min="00" max="31">
+                    <label for="dayOfBirth">Day of Birth</label>
+                  </div>
+
+                  <div class="input-field col s2">
+                    <input id="yearOfBirth" type="number" class="validate" placeholder="1992" min="1900" max="2019">
+                    <label for="yearOfBirth">Year of Birth</label>
+                  </div> 
+              </form>
           </div>
-          </div>
-          <div class="col s6">
-            <br>
-            <div class="col s12">
-            <div id="container" style="position: relative">
-              <div id="screen" style="position: absolute; width: 500px; height: 467px;">
-                <button id="chakraCrown" style="position: absolute; top: 20px; right:230px; background-color: transparent;"><img style="width: 50px; height: 50px;"src="/assets/images/crownchakra.png" ></button>
-                <button id="thirdEye" style="position: absolute; top: 42px; right:230px; font-size: 20px; background-color:transparent"><img style="width: 50px; height: 50px;"src="/assets/images/thirdeyechakra.png" ></button>
-                <button id="throat" style="position: absolute; top: 102px; right:230px; background-color:transparent; font-size: 20px; color:transparent"><img style="width: 50px; height: 50px;"src="/assets/images/throatchakra.png" ></button>
-                <button id="heart" style="position: absolute; top: 199px; right:230px; background-color:transparent; font-size: 20px; color:transparent"><img style="width: 50px; height: 50px;"src="/assets/images/heartchakra.png" ></button>
-                <button id="solarPlexus" style="position: absolute; top: 300px; right:230px; background-color:transparent; font-size: 20px; color:transparent"><img style="width: 50px; height: 50px;"src="/assets/images/solarplexuschakra.png" ></button>
-                <button id="sacrum" style="position: absolute; top: 355px; right:230px; background-color:transparent; font-size: 20px; color:transparent"><img style="width: 50px; height: 50px;"src="/assets/images/sacralchakra.png" ></button>
-                <button id="root" style="position: absolute; top: 405px; right:230px; background-color:transparent; color:transparent"><img style="width: 50px; height: 50px;"src="/assets/images/rootchakra.png" ></button>
-              </div>
-              <img src="/assets/images/test.png" usemap="#image-map" hide-focus="true" height="150%" width="95%">
-           <map name="image-map">
-          <area id="one" target="_blank" alt="ChakraCrown" title="ChakraCrown" href="index.handlebars" coords="240,9,10" shape="circle">
-          <area target="_top" alt="ThirdEye" title="ThirdEye" href="index.handlebars" coords="240,52,10" shape="circle">
-          <area target="_top" alt="Throat" title="Throat" href="index.handlebars" coords="240,142,10" shape="circle">
-          <area target="_top" alt="Heart" title="Heart" href="index.handlebars" coords="240,204,10" shape="circle">
-          <area target="_top" alt="SolarPlexus" title="SolarPlexus" href="index.handlebars" coords="240,307,10" shape="circle">
-          <area target="_top" alt="sacrum" title="sacrum" href="index.handlebars" coords="240,355,10" shape="circle">
-          <area target="_top" alt="Root" title="Root" href="" coords="240,405,10" shape="circle">
-             </map>
-           </canvas>
-        </div>
+        </form>
       </div>
-            <br>
-            <br>
-            <div id="mantra" class="col s12" style="font-size: 50px;"></div>
-          </div>
-          <div class="col s3">
-            <div id="horoscopeBox" class="col s12" style="border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; color: grey; margin-bottom: 10px">
-            <br>
-            </div>
-            <br>
-            <div class="col s12" form action="#" style= "color: grey;"> Personal Issues
+      <div class="modal-footer">
+        <button id="submit" class="modal-close waves-effect waves-green btn-flat">SUBMIT</button>
+      </div>
+    </div>
+
+  </nav>
+  <br>
+
+
+  <!-- Page Layout here -->
+  <div class="row">
+    <div class="col s3">
+      <div id="instructBox" class="col s12" style="border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; margin-bottom: 10px; color: #5a5a5a">
+        Check the boxes below to see what chakras are blocked. We may have some recommendations below.
+      </div>
+      <div id="results" class="col s12" style="border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; margin-bottom: 10px; color: #5a5a5a; text-align:center">
+      </div>
+      <br>
+      <div class="col s6" form-action="#" style= "color: #5a5a5a;"> Personal Issues
               <p>
                 <label id="sleep">
                   <input type="checkbox"/>
                   <span>Sleep</span>
                 </label>
-                <label id="asthma">
+                <label id="soreThroat">
                   <input type="checkbox"/>
-                  <span>Asthma or Allergies</span>
+                  <span>Sore Throat</span>
                 </label>
                 <label id="eyesight">
                   <input type="checkbox"/>
                   <span>Eyesight</span>
                 </label>
+                 <label id="asthma">
+                  <input type="checkbox"/>
+                  <span>Asthma</span>
+                </label>
                 <label id="poorIntuition">
                   <input type="checkbox"/>
                   <span>Poor Intuition</span>
-                </label>
-                <label id="soreThroat">
-                  <input type="checkbox"/>
-                  <span>Sore Throat</span>
                 </label>
                 <label id="thyroidProblems">
                   <input type="checkbox"/>
@@ -177,17 +102,22 @@
                   <input type="checkbox"/>
                   <span>Eating Disorders</span>
                 </label>
+              
                 <label id="procrastination">
                   <input type="checkbox"/>
                   <span>Procrastination</span>
                 </label>
+                </p>
+              </div>
+              <div class="col s6" form-action="#" style= "color:#5a5a5a;"> 
+              <p><br>
                 <label id="alienation">
                   <input type="checkbox"/>
                   <span>Alienation</span>
                 </label>
                 <label id="heart">
                   <input type="checkbox"/>
-                  <span>Heart or Lung Problems</span>
+                  <span>Heart Problems</span>
                 </label>
                 <label id="hipPain">
                   <input type="checkbox"/>
@@ -197,7 +127,7 @@
                   <input type="checkbox"/>
                   <span>Sexual Dysfunction</span>
                 </label>
-                <label "depression">
+                <label id="depression">
                   <input type="checkbox"/>
                   <span>Depression</span>
                 </label>
@@ -224,9 +154,79 @@
               </p>
             <br>
             </div>
+            </div>
+    <div class="col s6">
+      <br>
+      <div class="col l12">
+        <div id="container" style="position: relative">
+          <div id="screen" style="position: absolute; width: 500px; height: 467px;">
+            <button id="chakraCrown" class="chakraCrown"
+              style="position: absolute; top: 195px; right:230px; background-color: transparent; border: none;"><img
+                style="width: 50px; height: 50px;" src="/assets/images/crownchakra.png"></button>
+            <button id="thirdEye"
+              style="position: absolute; top: 250px; right:230px; font-size: 20px; background-color:transparent; border: none;"><img
+                style="width: 50px; height: 50px;" src="/assets/images/thirdeyechakra.png"></button>
+            <button id="throat"
+              style="position: absolute; top: 325px; right:230px; background-color:transparent; font-size: 20px; color:transparent; border: none"><img
+                style="width: 50px; height: 50px;" src="/assets/images/throatchakra.png"></button>
+            <button id="heart"
+              style="position: absolute; top: 385px; right:230px; background-color:transparent; font-size: 20px; color:transparent; border: none;"><img
+                style="width: 50px; height: 50px;" src="/assets/images/heartchakra.png"></button>
+            <button id="solarPlexus"
+              style="position: absolute; top: 455px; right:230px; background-color:transparent; font-size: 20px; color:transparent; border: none;"><img
+                style="width: 50px; height: 50px;" src="/assets/images/solarplexuschakra.png"></button>
+            <button id="sacrum"
+              style="position: absolute; top: 533px; right:230px; background-color:transparent; font-size: 20px; color:transparent; border: none;"><img
+                style="width: 50px; height: 50px;" src="/assets/images/sacralchakra.png"></button>
+            <button id="root"
+              style="position: absolute; top: 600px; right:230px; background-color:transparent; color:transparent; border: none;"><img
+                style="width: 50px; height: 50px;" src="/assets/images/rootchakra.png"></button>
+            <img src="/assets/images/test.png" usemap="#image-map" hide-focus="true" height="150%" width="95%">
           </div>
+
+          <map name="image-map">
+            <area id="one" target="_blank" alt="ChakraCrown" title="ChakraCrown" href="index.handlebars"
+              coords="240,9,10" shape="circle">
+            <area target="_top" alt="ThirdEye" title="ThirdEye" href="index.handlebars" coords="240,52,10"
+              shape="circle">
+            <area target="_top" alt="Throat" title="Throat" href="index.handlebars" coords="240,142,10" shape="circle">
+            <area target="_top" alt="Heart" title="Heart" href="index.handlebars" coords="240,204,10" shape="circle">
+            <area target="_top" alt="SolarPlexus" title="SolarPlexus" href="index.handlebars" coords="240,307,10"
+              shape="circle">
+            <area target="_top" alt="sacrum" title="sacrum" href="index.handlebars" coords="240,355,10" shape="circle">
+            <area target="_top" alt="Root" title="Root" href="" coords="240,405,10" shape="circle">
+          </map>
+          </canvas>
         </div>
+        <br>
+        <br>
+        <div id="mantra" class="col s12" style="font-size: 50px;"></div>
+      </div>
+    </div>
+
+    <div class="col s3">
+      <div class="col s12" img src="https://via.placeholder.com/150" alt="chakra placeholder">
+        <br>
+        <br>
+      </div>
+      <div id="horoscopeBox" class="col s12" style="border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; color: #5a5a5a; margin-bottom: 10px"> 
+      </div>
+      <div id="infoBox" class="col s12"
+        style=" border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; margin-bottom: 10px; color: #5a5a5a; text-align: center">
+        Click a chakra in the center to find out more.
+        <br>
+        <br>
+      </div>
+      <div id="tipBox" class="col s12" style="border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; margin-bottom: 10px; color: #5a5a5a; text-align: center">
+        Click a chakra in the center to find out more.
+        <br>
+        <br>
+      </div>
+      
+    </div>
   </div>
-  <script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
+</div>
+</div>
+<script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
 </div>
 </div>

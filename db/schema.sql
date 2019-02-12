@@ -9,7 +9,6 @@ CREATE TABLE Signs
 	dayOfBirth INT NULL,
 	monthOfBirth INT NULL,
 	yearOfBirth INT NULL,
-	email varchar(255) NOT NULL,
-	primary key (ID)
+	email varchar(255) NOT NULL
 );
 
