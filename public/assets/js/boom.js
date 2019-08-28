@@ -168,15 +168,6 @@ $(document).ready(function(){
   $('#modal1').modal('open');
   $("#results").hide();
   $("#horoscopeBox").hide();
-
-
-  $('.modal-overlay').on('click', function() {
-    // return;
-    // event.preventDefault();
-    $('#modal1').css({'display': 'block!important', 'opacity': '1!important'});
-    // $('#modal1').css('opacity', '1');
-    console.warn('aaa', $('#modal1').css('opacity'))
-  })
 });
 
 $('#btnSubmit').on('click', function() {
