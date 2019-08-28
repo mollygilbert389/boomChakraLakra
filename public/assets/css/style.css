@@ -9,3 +9,29 @@ nav {
     position: relative;
     align-content: center;
 }
+
+@media screen and (max-width: 980px) {
+    .container {
+        max-width: 780px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 680px;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+    .myModal {
+       float: none;
+       width: 80%;
+    }
+    .nav {
+       float: none;
+       text-align: center;
+       padding-bottom: 10px;
+       width: 100%;
+    }
+}

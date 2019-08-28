@@ -1,15 +1,25 @@
 <div id="master">
+  
   <nav style="background-color: transparent; border: none; height: 1px; margin-bottom: 50px;">
-    <a class="waves-effect waves-light btn modal-trigger" href="#myModal">Log In</a>
+      <nav>
+    <div class="nav-wrapper">
+      {{!-- <a class="waves-effect waves-light btn modal-trigger brand-logo" href="#modal1">Log In</a> --}}
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html">Meet the Team!</a></li>
+        <li><a href="badges.html">Additional Reading</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Modal Structure -->
-    <div id="myModal" class="modal">
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
       <div class="modal-content">
         <h4 style="color: #5a5a5a">Tell us about yourself!</h4>
         <form>
           <div class="row">
             <form class="col s6">
               <div class="row">
+
                 <div class="input-field col s4">
                   <input id="firstName" type="text" class="validate">
                   <label for="firstName">First Name</label>
@@ -21,11 +31,13 @@
                   <label for="email">Email</label>
                 </div>
               </div>
+
               <div class="input-field col s2">
                 <input id="monthOfBirth" type="number" class="validate" ng-pattern="onlyNumbers" placeholder="01"
                   min="00" max="12">
                 <label for="monthOfBirth">Month of Birth</label>
               </div>
+              
               <form class="col s5">
                 <div class="row">
                   <div class="input-field col s2">
@@ -43,9 +55,10 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button id="submit" class="modal-close waves-effect waves-green btn-flat">SUBMIT</button>
+        <button id="btnSubmit" class="modal-close waves-effect waves-green btn-flat">SUBMIT</button>
       </div>
     </div>
+          
 
   </nav>
   <br>
