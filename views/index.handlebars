@@ -1,15 +1,24 @@
 <div id="master">
-  <nav style="background-color: transparent; border: none">
-    <a class="waves-effect waves-light btn modal-trigger" href="#myModal">Log In</a>
+  
+  <nav style="background-color: transparent; border: none; height: 1px; margin-bottom: 50px;">
+      <nav>
+    <div class="nav-wrapper">
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#">Meet the Team!</a></li>
+        <li><a href="#">Additional Reading</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Modal Structure -->
-    <div id="myModal" class="modal">
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
       <div class="modal-content">
         <h4 style="color: #5a5a5a">Tell us about yourself!</h4>
         <form>
           <div class="row">
             <form class="col s6">
               <div class="row">
+
                 <div class="input-field col s4">
                   <input id="firstName" type="text" class="validate">
                   <label for="firstName">First Name</label>
@@ -21,11 +30,13 @@
                   <label for="email">Email</label>
                 </div>
               </div>
+
               <div class="input-field col s2">
                 <input id="monthOfBirth" type="number" class="validate" ng-pattern="onlyNumbers" placeholder="01"
                   min="00" max="12">
                 <label for="monthOfBirth">Month of Birth</label>
               </div>
+              
               <form class="col s5">
                 <div class="row">
                   <div class="input-field col s2">
@@ -43,9 +54,10 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button id="submit" class="modal-close waves-effect waves-green btn-flat">SUBMIT</button>
+        <button id="btnSubmit" class="modal-close waves-effect waves-green btn-flat">SUBMIT</button>
       </div>
     </div>
+          
 
   </nav>
   <br>
@@ -169,9 +181,8 @@
             <button id="throat"
               style="position: absolute; top: 325px; right:225px; background-color:transparent; font-size: 20px; color:transparent; border: none"><img
                 style="width: 50px; height: 50px;" src="/assets/images/throatchakra.png"></button>
-            <button id="heart"
-              style="position: absolute; top: 385px; right:225px; background-color:transparent; font-size: 20px; color:transparent; border: none;"><img
-                style="width: 50px; height: 50px;" src="/assets/images/heartchakra.png"></button>
+            <button id="heartbutton"
+              style="position: absolute; top: 385px; right:225px; background-color: transparent; font-size: 20px; color:transparent; border: none;"> <img style="width: 50px; height: 50px;" src="/assets/images/heartchakra.png"></button>
             <button id="solarPlexus"
               style="position: absolute; top: 455px; right:225px; background-color:transparent; font-size: 20px; color:transparent; border: none;"><img
                 style="width: 50px; height: 50px;" src="/assets/images/solarplexuschakra.png"></button>
@@ -200,15 +211,11 @@
         </div>
         <br>
         <br>
-        <div id="mantra" class="col s12" style="font-size: 50px;"></div>
+        <div id="mantra" class="col s12" style="font-size: 50px; text-align: right;">Namaste..</div>
       </div>
     </div>
 
     <div class="col s3">
-      <div class="col s12" img src="https://via.placeholder.com/150" alt="chakra placeholder">
-        <br>
-        <br>
-      </div>
       <div id="horoscopeBox" class="col s12" style="border-style: solid; border-width: 5px; border-color: white; padding: 2px; border-radius: 8px; color: #5a5a5a; margin-bottom: 10px"> 
       </div>
       <div id="infoBox" class="col s12"
