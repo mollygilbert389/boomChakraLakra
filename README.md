@@ -29,8 +29,8 @@ A whimsical application made to takein user birthday and provide horiscope data 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Contributors
-* Kate Koch
-* Dustin Crawford
+* [Kate Koch](https://github.com/katevk1)
+* [Dustin Crawford](https://github.com/dsc1996)
 
 ## Questions
 Please see my github: [Gihub Profile](https://github.com/mollygilbert389)
